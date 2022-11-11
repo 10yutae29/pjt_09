@@ -15,8 +15,6 @@
 <script>
 import axios from 'axios'
 
-
-
 const API_KEY = process.env.VUE_APP_MOVIE_API
 const API_URL = `https://api.themoviedb.org/3/movie/top_rated?`
 const params = {
@@ -50,6 +48,7 @@ export default {
         .catch((error) => {
           console.log(error)
         })
+      this.$router.push('/movies')
     }
   }
 
