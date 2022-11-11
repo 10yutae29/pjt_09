@@ -1,10 +1,13 @@
 <template>
   <div id="app">
-    <nav>
-      <div>
-        <router-link to="/movies">MOVIE</router-link> |
-        <router-link to="/random">Random</router-link> |
-        <router-link to="/watch-list">WatchList</router-link>
+    <nav class="row justify-content-between">
+      <div class="col-4">
+        <img id='logo' src="https://banner2.cleanpng.com/20180422/pqw/kisspng-photographic-film-movie-icons-cinema-clapperboard-5adc6cb00e9939.5609916715243951840598.jpg" alt="">
+      </div>
+      <div class="col-4 my-auto">
+        <router-link to="/movies" class="text-decoration-none col-3 mx-3">MOVIE</router-link> 
+        <router-link to="/random" class="text-decoration-none col-3 mx-3">Random</router-link> 
+        <router-link to="/watch-list" class="text-decoration-none col-3 mx-3">WatchList</router-link>
       </div>
     </nav>
     <router-view/>
@@ -64,15 +67,22 @@ export default {
 }
 
 nav {
-  padding: 30px;
+  /* padding: 30px; */
+  height:max-content;
+  background-color: lightcyan;
 }
 
 nav a {
+  font-size: 30px;
   font-weight: bold;
-  color: #2c3e50;
+  color: black;
 }
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+#logo {
+  width: 80px;
+  height: 80px;
 }
 </style>
