@@ -1,12 +1,16 @@
 <template>
   <div>
-    <h1>RandomView</h1>
+    <TheRandom/>
   </div>
 </template>
 
 <script>
+import TheRandom from '@/components/TheRandom.vue'
 export default {
-  name: 'RandomView'
+  name: 'RandomView',
+  components: {
+    TheRandom,
+  }
 }
 </script>
 
