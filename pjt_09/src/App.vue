@@ -8,13 +8,13 @@
       </div>
     </nav>
     <router-view/>
-    <TheRandom/>
+
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-import TheRandom from '@/components/TheRandom.vue'
+
 
 
 const API_KEY = process.env.VUE_APP_MOVIE_API
@@ -28,7 +28,7 @@ const params = {
 export default {
   name: 'App',
   components: {
-    TheRandom,
+
   },
   data() {
     return {
