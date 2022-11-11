@@ -35,22 +35,22 @@ export default {
   },
   methods: {     
     },
-    created() {
-      axios({
-        methods: 'get',
-        url: API_URL,
-        params: params,
+  created() {
+    axios({
+      methods: 'get',
+      url: API_URL,
+      params: params,
+    })
+      .then((response) => {
+        console.log(response)
+        this.$store.commit("GET_DATA", response.data.results)
       })
-        .then((response) => {
-          console.log(response)
-          this.$store.commit("GET_DATA", response.data.results)
-        })
-        .catch((error) => {
-          console.log(error)
-        })
-      this.$router.push('/movies')
-    }
+      .catch((error) => {
+        console.log(error)
+      })
+
   }
+}
 
 </script>
 
