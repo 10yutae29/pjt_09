@@ -1,9 +1,18 @@
 <template>
-  <div>
-    <h1>보고싶은 영화</h1>
-    <input type="text" v-model="movieTitle">
-    <button @click="addWatchList">Add</button>
+  <div class="list-group mx-auto" style="width: 80%;" >
+    <div class="list-group-item">
+      <h1>보고싶은 영화</h1>
+      <input type="text" v-model="movieTitle">
+      <span>&nbsp;</span>
+      <button 
+      class="btn btn-outline-primary"
+      @click="addWatchList"
+      >
+      Add
+      </button>
+    </div>
     <WatchListItem
+    class="list-group-item"
     v-for="(movie, index) in watchList"
     :key="`movie-${index}`"
     :movie="movie"
